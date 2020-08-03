@@ -1,6 +1,9 @@
 # DS-Unit-3-Sprint-1-Software-Engineering
 Software Engineering and Reproducible Research for Data Science
 
+#LINK to my package:
+https://test.pypi.org/project/lambdata-skhabiri/
+
 ## The World Beyond Notebooks
 
 Python Notebooks are great - they let us explore data and communicate and share
