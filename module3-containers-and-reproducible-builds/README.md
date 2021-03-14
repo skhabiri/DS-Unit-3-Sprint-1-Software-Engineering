@@ -22,7 +22,7 @@ after lecture.
 
 ## Assignment
 
-Install and run code from your `lambdata` package inside a Docker container.
+Install and run code from your `skpackage` package inside a Docker container.
 This is a relatively simple baseline to support the variety of local workflows
 students will have.
 
