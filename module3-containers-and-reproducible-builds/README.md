@@ -77,7 +77,7 @@ Install Docker Desktop and create login in docker.com. Container can create a mi
 24. Docker can be used for sharing software, and it can be published on hub.docker.com
 
 
-Our goal is to test our sketimate package in a debian OS through docker image.
+Our goal is to test our skestimate package in a debian OS through docker image.
 Here are the steps:
 * Create the Dockerfile in EstimatePkg directory, which is the repository (project) directory
    * The specific instructions in Dockerfile are:
