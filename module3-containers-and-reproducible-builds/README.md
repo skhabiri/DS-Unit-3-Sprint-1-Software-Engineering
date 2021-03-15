@@ -55,7 +55,7 @@ Install Docker Desktop and create login in docker.com. Container can create a mi
 2. Add a new Instance
 3. `apk add nano` adds nano text editor to the container. This is specific to the host OS distribution which is arch linux in this case, and it’s not related to the docker.
 4. `which docker` verifies existence of docker.
-5. `docker run hello-world`        # since it’s not recognized locally docker client contact docker daemon to pull the hello-world image from docker hub and create a docker container based on that image which runs an executable “hello from docker world” and stream it back to the docker client to print it on our local terminal.. 
+5. `docker run hello-world`        # since `hello-world` image is not recognized locally, docker client contacts docker daemon to pull the `hello-world` image from docker hub and creates a docker container based on that image which runs an executable “hello from docker world” and stream it back to the docker client to print it on our local terminal.
 6. `docker run -it debian /bin/bash`        # create a container based on debian distribution of linux with bash shell interactive mode.
 7. `nano`                # doesn’t work anymore as we are in a new container. Now we are in debian linux not arch linux anymore.
 8. `exit` we exit from debian and return to the jost arch linux OS that we were before
