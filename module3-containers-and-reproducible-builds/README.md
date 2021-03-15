@@ -87,7 +87,7 @@ Here are the steps:
       * numpy, pandas, scikit-learn,  and matplotlib all installed
       * skestimate package installed
 * Build the image on local machine with `docker build . -t skestimate_di`
-* Very the existence of the new package with `docker image ls`
+* Verify the existence of the new package with `docker image ls`
 * Create and enter a fresh container with `docker run -it skestimate_di’
 * Test the package with:
    * python3
