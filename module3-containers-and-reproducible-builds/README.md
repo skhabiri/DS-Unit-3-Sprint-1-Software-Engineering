@@ -55,7 +55,7 @@ Install Docker Desktop and create login in docker.com. Container can create a mi
 2. Add a new Instance
 3. `apk add nano` adds nano text editor to the container. This is specific to the host OS distribution which is arch linux in this case, and it’s not related to the docker.
 4. `which docker` verifies existence of docker.
-5. `docker run hello-world`        # since `hello-world` image is not recognized locally, docker client contacts docker daemon to pull the `hello-world` image from docker hub and creates a docker container based on that image which runs an executable “hello from docker world” and stream it back to the docker client to print it on our local terminal.
+5. `docker run hello-world`        # since `hello-world` image is not recognized locally, docker client contacts docker daemon to pull the `hello-world` image from docker hub and creates a docker container based on that image which then runs an executable “hello from docker world” and stream it back to the docker client to print it on our local terminal.
 6. `docker run -it debian /bin/bash`        # create a container based on debian distribution of linux with bash shell interactive mode.
 7. `nano`                # doesn’t work anymore as we are in a new container. Now we are in debian linux not arch linux anymore.
 8. `exit` we exit from debian and return to the same arch linux OS that we were there before
@@ -68,12 +68,12 @@ Install Docker Desktop and create login in docker.com. Container can create a mi
 15. `docker image ls`        # shows all the local images available
 16. `docker container ls -a`        # shows container ID and images available locally of the past containers that were recently run. Docker containers only save the differences vs original images and are usually small, but docker images by themselves could be large.
 17.  `nano Dockerfile`        # allows us to create a tweaked image based on an existing docker hub image to be able to build a fresh container based on that image every time we launch docker run.
-18.  `docker build . -t skestimate`                # build an image based on the Dockerfile in . and tag it with a specific name skestimate
+18.  `docker build . -t skestimate`                # build an image named skestimate based on the Dockerfile located in `.` and tag it with specific name skestimate
 19.  `docker image ls`        # in addition to debian and hello-world, lists skestimate as a local image available to build a container based on.
-20.  `docker run -it skestimate`        #create a container based on an image which was originally built according to Dockerfile. The Dockerfile is a metafile located in the project (repository) directory not package directory. 
+20.  `docker run -it skestimate`        #create a container based on an `skestimate` image, which was originally built according to Dockerfile. The Dockerfile is a metafile located in the project (repository) directory not package directory. 
 21. `docker image rm hello-world`        # We can remove unnecessary images to free up space. However, if there is a container dependent on that image, first we need to remove the container.
 22. `docker container rm 91a3932b5cdc`, `docker image rm hello-world`, `docker image ls`
-23. `docker run lambdata_skhab python3 -c "import skestimate; print(skestimate.example().xskew(0.9))"`        # without running the image interactively, it runs a command inside a freshly created container based on the image skestimate and exit.
+23. `docker run skestimate python3 -c "import skestimate; print(skestimate.example().xskew(0.9))"` # without running the image interactively, it runs a command inside a freshly created container based on the image skestimate and exit.
 24. Docker can be used for sharing software, and it can be published on hub.docker.com
 
 
