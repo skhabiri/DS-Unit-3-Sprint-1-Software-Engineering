@@ -50,6 +50,13 @@ highlights and summarizes the benefits and use cases of both.
 ___
 
 **Containers and Reproducible Builds-313:** 
+#### Installing Docker:
+Using brew to install Docker binary only installs the Docker client, `brew install docker` and you cannot use it to run the docker daemon. Docker daemon uses Linux-specific kernel features, therefore you can’t run Docker natively in OS X. So you have to install docker-machine and virtualbox to create a docker machine and attach it to virtualbox, `brew install docker-machine; brew install virtualbox --cask`. Now we can create a docker machine by `docker-machine create --driver virtualbox myDVM`. The VM is listed under `docker-machine ls`. We might have multiple docker machine. To tell the Docker which VM should be used use `$ docker-machine env myDVM`. Finally connect client shell to the new machine, `$ eval $(docker-machine env myDVM)`. 
+This seems complicated. Luckily there is a easier way. Simply install Docker Desktop on macOS. Docker Desktop offers a simplified installation of the Docker daemon (and the associated commands), a docker icon to give you quick access to your DockerHub repositories, quick access to the installation of Kitematic (for GUI-based management of containers. To install Docker Desktop with Homebrew 
+```
+brew install --cask docker
+```
+
 Install Docker Desktop and create login in docker.com. Container can create a minimally required operating system that is more efficient in doing specialized work. Docker can also save on the hardware expenditure as it can create different environment on docker daemon and stream it to the docker client on our local machine. We can use our local machine and `docker` command to run a client docker or use a web based docker client as follows.
 1. Log into https://labs.play-with-docker.com/
 2. Add a new Instance
