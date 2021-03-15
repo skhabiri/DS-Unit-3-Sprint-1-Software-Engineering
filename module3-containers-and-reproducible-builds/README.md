@@ -58,7 +58,7 @@ Install Docker Desktop and create login in docker.com. Container can create a mi
 5. `docker run hello-world`        # since `hello-world` image is not recognized locally, docker client contacts docker daemon to pull the `hello-world` image from docker hub and creates a docker container based on that image which runs an executable “hello from docker world” and stream it back to the docker client to print it on our local terminal.
 6. `docker run -it debian /bin/bash`        # create a container based on debian distribution of linux with bash shell interactive mode.
 7. `nano`                # doesn’t work anymore as we are in a new container. Now we are in debian linux not arch linux anymore.
-8. `exit` we exit from debian and return to the jost arch linux OS that we were before
+8. `exit` we exit from debian and return to the same arch linux OS that we were there before
 9. `docker run -it debian /bin/bash`        # will create a new container with a new hash numbers. The idea is containers are disposable and we can recreate them from images.
 10. `apt update`                # update all the packages
 11. `apt install python3`        # install python3 on the Debian distribution of Linux kernel.
