@@ -70,7 +70,7 @@ Install Docker Desktop and create login in docker.com. Container can create a mi
 17.  `nano Dockerfile`        # allows us to create a tweaked image based on an existing docker hub image to be able to build a fresh container based on that image every time we launch docker run.
 18.  `docker build . -t skestimate`                # build an image based on the Dockerfile in . and tag it with a specific name skestimate
 19.  `docker image ls`        # in addition to debian and hello-world, lists skestimate as a local image available to build a container based on.
-20.  `docker run -it skestimate`        #create a container based on an image which was originally built according to Dockerfile Dockerfile is a metafile located in the project (repository) directory not package directory. 
+20.  `docker run -it skestimate`        #create a container based on an image which was originally built according to Dockerfile. The Dockerfile is a metafile located in the project (repository) directory not package directory. 
 21. `docker image rm hello-world`        # We can remove unnecessary images to free up space. However, if there is a container dependent on that image, first we need to remove the container.
 22. `docker container rm 91a3932b5cdc`, `docker image rm hello-world`, `docker image ls`
 23. `docker run lambdata_skhab python3 -c "import skestimate; print(skestimate.example().xskew(0.9))"`        # without running the image interactively, it runs a command inside a freshly created container based on the image skestimate and exit.
